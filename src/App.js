@@ -2,7 +2,7 @@ import React from "react";
 
 import People from "./assets/people.svg";
 import Arrow from "./assets/arrow.svg";
-import Trash from "./assets/trash.shg"
+import Trash from "./assets/trash.svg";
 
 
 import {
@@ -13,10 +13,10 @@ import {
     InputLabel,
     Input,
     Button,
-    User
+   /* User,*/
 } from "./styles";
 
-function APP() {
+function App() {
     const users = [
         { id: Math.random(), name: "Rodolfo", age: 28 },
         { id: Math.random(), name: "Maria", age: 21 },
@@ -37,18 +37,18 @@ function APP() {
                 <Button>
                     Cadastrar <img alt="seta" src={Arow} />
                 </Button>
+                
                 <ul>
                     {users.map((user) => (
-                        <User key={user.id}>
-                           <p>{user.name}</p> - <p>{user.age}</p>
-                            <button><img src={Trash} alt="lata-de-lixo"/></button>
-                        </User>
-                    ))}
+                        <li key={user.id}>
+                         {user.name} - {user.age}
+                         </li>
+                        ))}
                 </ul>
             </ContainerItens>
         </Container>
     );
 }
 
-export default APP
+export default App;
 

@@ -88,7 +88,7 @@ export const Button = styled.button`
     }
 
     &:active {
-        opacity: 0.6;
+        opacity: 0.5;
     }
 
 `;
